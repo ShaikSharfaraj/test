@@ -1,0 +1,68 @@
+Starting a Project with Git
+Create a local repo (omit <directory> to initialise the current directory as a git repo)
+$ git init <directory>
+Download a remote repo
+$ git clone <url>
+Make a Change
+Add a file to staging
+$ git add <file>
+Stage all files
+$ git add .
+Commit all staged files to git
+$ git commit -m "commit message"
+Add all changes made to tracked files & commit
+$ git commit -am "commit message"
+
+----------------------------------------------------
+Branches
+List all local branches. Add -r flag to show all remote branches. -a flag for all branches.
+$ git branch
+Create a new branch
+$ git branch <new-branch>
+Switch to a branch & update the working directory
+$ git checkout <branch>
+Create a new branch and switch to it
+$ git checkout -b <newbranch>
+Delete a merged branch
+$ git branch -d <branch>
+Delete a branch, whether merged or
+not
+$ git branch -D <branch>
+Add a tag to current commit (often used for new version releases)
+$ git tag <tag-name>
+
+
+------------------------------------------------------
+Merging
+Merge branch a into branch b. Add --no-ff option for no-fast-forward merge
+$ git checkout b
+
+$ git merge a
+Merge & squash all commits into one new commit
+$ git merge --squash a
+
+
+-------------------------------------------------------
+
+
+Synchronizing
+Add a remote repo
+$ git remote add <alias> <url>
+View all remote connections. Add -v flag to view urls.
+$ git remote
+Remove a connection
+$ git remote remove <alias>
+Rename a connection
+$ git remote rename <old> <new>
+Fetch all branches from remote repo (no merge)
+$ git fetch <alias>
+Fetch a specific branch
+$ git fetch <alias> <branch>
+Fetch the remote repo's copy of the current branch, then merge
+$ git pull
+Move (rebase) your local changes onto the top of new changes made to the remote repo (for clean, linear history)
+$ git pull --rebase <alias>
+Upload local content to remote repo
+$ git push <alias>
+Upload to a branch (can then pull request)
+$ git push <alias> <branch>
